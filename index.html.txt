@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasan Aybak Öğretmenler Şubesi Menü</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: red;
+            color: white;
+            transition: background-color 0.5s, color 0.5s;
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            color: black;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: slideIn 1s ease-in-out forwards;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: lightgray;
+            transition: background-color 0.3s;
+        }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+        .dark-mode table {
+            background-color: gray;
+            color: white;
+        }
+        .toggle-btn {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .toggle-btn:hover {
+            background-color: black;
+            color: white;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>HASAN AYBAK ÇİĞKÖFTE</h1>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Koyu Modu Aç/Kapat</button>
+    <table>
+        <tr><th>Ürün</th><th>Fiyat (TL)</th></tr>
+        <tr><td>Standart Dürüm</td><td>85</td></tr>
+        <tr><td>Mega Dürüm</td><td>115</td></tr>
+        <tr><td>Ultra Mega Dürüm</td><td>135</td></tr>
+        <tr><td>Doritoslu Standart Dürüm</td><td>115</td></tr>
+        <tr><td>Doritoslu Mega Dürüm</td><td>135</td></tr>
+        <tr><td>Doritoslu Ultra Mega Dürüm</td><td>165</td></tr>
+        <tr><td>1 Kişilik Porsiyon</td><td>120</td></tr>
+        <tr><td>2 Kişilik Porsiyon</td><td>220</td></tr>
+        <tr><td>Aile Boyu Porsiyon</td><td>330</td></tr>
+        <tr><td>1 Kg Porsiyon</td><td>440</td></tr>
+        <tr><td>Doyuran Menü</td><td>380</td></tr>
+        <tr><td>Ultra Doyuran Menü</td><td>500</td></tr>
+        <tr><td>Öğrenci Standart Menü</td><td>85</td></tr>
+        <tr><td>Öğrenci Doyuran Menü</td><td>125</td></tr>
+        <tr><th>İçecekler</th><th>Fiyat (TL)</th></tr>
+        <tr><td>Su</td><td>10</td></tr>
+        <tr><td>Cola 330 ml</td><td>45</td></tr>
+        <tr><td>Cola 1 lt</td><td>55</td></tr>
+        <tr><td>Cola 2,5 lt</td><td>70</td></tr>
+        <tr><td>Şalgam 1 lt</td><td>50</td></tr>
+        <tr><td>Şalgam 330 ml</td><td>25</td></tr>
+        <tr><td>Ayran 275 ml</td><td>25</td></tr>
+        <tr><td>Ayran 175 ml</td><td>20</td></tr>
+        <tr><td>Soda</td><td>15</td></tr>
+        <tr><td>Meyveli Soda</td><td>20</td></tr>
+        <tr><td>Fuse Tea 330 ml</td><td>45</td></tr>
+    </table>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
